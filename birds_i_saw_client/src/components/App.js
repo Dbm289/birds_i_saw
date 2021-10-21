@@ -1,9 +1,11 @@
 import React from "react";
 
+import BirdsContainer from "./BirdsContainer";
+
 const App = () => {
     return (
         <div>
-        Hello World 
+        <BirdsContainer />
         </div>
     );
 };
