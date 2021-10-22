@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { addBird } from '...actions/birdsActions'
 
 class BirdsForm extends Component {
 
@@ -19,9 +22,14 @@ class BirdsForm extends Component {
         })
     }
 
+    handleSubmit = e => {
+        e.preventDefault()
+        this.props.addBird(this.state)
+    }
+
     render() {
         return (
-            <form>
+            <form onSubmit={handleSubmit}>
 
             <label>Name:</label>
 
@@ -66,4 +74,4 @@ class BirdsForm extends Component {
     }
 }
 
-export default BirdsForm;
+export default connect(null, { addBird })(BirdsForm);
