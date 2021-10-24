@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { addBird } from '...actions/birdsActions'
+import { addBird } from '../actions/birdsActions'
 
 class BirdsForm extends Component {
 
@@ -22,6 +22,10 @@ class BirdsForm extends Component {
         })
     }
 
+    handleFavorite = e => {
+        //do some stuff here
+    }
+
     handleSubmit = e => {
         e.preventDefault()
         this.props.addBird(this.state)
@@ -29,7 +33,7 @@ class BirdsForm extends Component {
 
     render() {
         return (
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
 
             <label>Name:</label>
 
