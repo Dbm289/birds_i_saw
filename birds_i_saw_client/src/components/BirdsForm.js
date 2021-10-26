@@ -22,12 +22,20 @@ class BirdsForm extends Component {
         })
     }
 
-    handleFavorite = e => {
-        //do some stuff here
+    toggleFavAction = e => {
+        console.log(e.target.checked)
+        const {checked} = e.target
+        this.setState({
+            favorite: checked
+        })
+        //this.setState({
+        //    [name]: value == 
+       // })
     }
 
     handleSubmit = e => {
         e.preventDefault()
+        console.log(this.state)
         this.props.addBird(this.state)
     }
 
@@ -67,7 +75,7 @@ class BirdsForm extends Component {
 
             <label>Favorite?</label>
 
-            <input type='number' value={this.state.favorite} onChange={this.handleChange} name="favorite"/>
+            <input type='checkbox' onChange={this.toggleFavAction} name="favorite"></input>
 
             < br />
 
