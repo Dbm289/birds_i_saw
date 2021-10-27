@@ -20,15 +20,16 @@ export const addBird = bird => {
 }
 
 
-export const favBird = bird => {
+export const editBird = (bird) => {
+    console.log(bird)
     return (dispatch) => {
-        fetch('http://127.0.0.1:3000/birds', {
+        fetch(`http://127.0.0.1:3000/birds/${bird.id}`, {
             method: 'PATCH',
             body: JSON.stringify(bird),
             headers: { 'Content-Type': 'application/json'}
         })
         .then(resp => resp.json())
-        .then(birds => dispatch( { type: 'FAV_BIRD', payload: birds}))
+        .then(birds => dispatch( { type: 'EDIT_BIRD', payload: birds}))
     }
     
 }
