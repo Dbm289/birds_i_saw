@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { fetchBirds } from '../actions/birdsActions'
 import BirdsList from './BirdsList'
 import BirdsForm from "./BirdsForm";
+import Navbar from "./Navbar"
 
 class BirdsContainer extends Component {
 
@@ -13,6 +14,7 @@ class BirdsContainer extends Component {
     render() {
         return (
             <div>
+
 
             <BirdsForm />
 
