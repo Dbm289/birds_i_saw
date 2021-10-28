@@ -34,12 +34,13 @@ export const editBird = (bird) => {
     
 }
 
-export const deleteBird = (bird) => {
+export const deleteBird = (birdId) => {
     return (dispatch) => {
-        fetch(`http://127.0.0.1:3000/birds/${bird.id}`, {
+        fetch(`http://127.0.0.1:3000/birds/${birdId}`, {
             method: 'DELETE',
-            
-            
+            headers: { 'Content-Type': 'application/json'}
         })
+        .then(birds => dispatch( { type: 'DELETE_BIRD', payload: {birdId}}))
     }
+    
 }
