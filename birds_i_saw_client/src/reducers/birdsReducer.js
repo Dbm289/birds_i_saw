@@ -5,7 +5,15 @@ export const birdsReducer = (state = [], action) => {
         case 'ADD_BIRD':
             return [...state, action.payload]
         case 'EDIT_BIRD':
-            return [...state, action.payload]
+            return [...state, state.birds.map(bird => {
+                if (bird.id !== action.payload) {
+                    return bird
+                }
+                return {
+                    ...bird,
+                    checked: !bird.checked
+                }
+            })]
             //right now you're just adding the action payload, you may need to modify that
             default: 
             return state

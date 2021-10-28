@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux'
-import { editBird } from "../actions/birdsActions";
+import { deleteBird, editBird } from "../actions/birdsActions";
 
 const BirdsList = ( { birds, editBird }) => {
 
@@ -17,6 +17,10 @@ const BirdsList = ( { birds, editBird }) => {
        // })
     }
 
+    const deleteAction = (e, bird) => {
+
+    }
+
     return (
         <div>
         <ul>
@@ -26,7 +30,8 @@ const BirdsList = ( { birds, editBird }) => {
                     - Number of times seen: {bird.times_seen} 
                     - Quality of sighting: {bird.quality_of_sightings} 
                     - Favorite? {bird.favorite ? 'yes' : 'no'} 
-                    <input type='checkbox' onChange={(e) => toggleFavAction(e, bird)} name="favorite"></input> 
+                    <input type='checkbox' onChange={(e) => toggleFavAction(e, bird)} name="favorite"></input>
+                    <input type='button' onClick={(e) => deleteAction(e, bird)} name="delete" value="Delete Bird"></input> 
                     </li>
                 
             )}

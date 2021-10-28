@@ -33,3 +33,13 @@ export const editBird = (bird) => {
     }
     
 }
+
+export const deleteBird = (bird) => {
+    return (dispatch) => {
+        fetch(`http://127.0.0.1:3000/birds/${bird.id}`, {
+            method: 'DELETE',
+            
+            
+        })
+    }
+}
