@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from './Button';
 import { MenuItems } from "./MenuItems"
 import './Navbar.css'
+import NavItem from './NavItem';
 
 class Navbar extends Component {
 
@@ -28,12 +29,7 @@ class Navbar extends Component {
 
                     {MenuItems.map((item, index) => {
                         return (
-                            <li key={index}>
-                                <a className={item.cName} href={item.url}>  
-                                
-                                {item.title}
-                                </a>
-                            </li>
+                            <NavItem key={index} item={item} />
 
                         )
                     })

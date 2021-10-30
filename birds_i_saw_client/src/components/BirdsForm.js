@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { addBird } from '../actions/birdsActions'
 
+import '../Stylesheet.css'
+
 class BirdsForm extends Component {
 
     state = {
@@ -41,7 +43,7 @@ class BirdsForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className="form" onSubmit={this.handleSubmit}>
 
             <label>Name:</label>
 
