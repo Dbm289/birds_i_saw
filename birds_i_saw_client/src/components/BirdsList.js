@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux'
+import Bird from './Bird';
 import { deleteBird, editBird } from "../actions/birdsActions";
 
 const BirdsList = ( { birds, editBird, deleteBird }) => {
@@ -26,20 +27,26 @@ const BirdsList = ( { birds, editBird, deleteBird }) => {
     return (
         <div>
         <ul>
-            {birds.map(bird => 
+            {birds.filter((bird) => {
+                return bird.favorite === true
+            }
+
+            ).map(bird => 
                 
-                    <li key={bird.id}>{bird.name} - {bird.last_seen_on} - {bird.location_seen} 
-                    - Number of times seen: {bird.times_seen} 
-                    - Quality of sighting: {bird.quality_of_sightings} 
-                    - Favorite? {bird.favorite ? 'yes' : 'no'} 
-                    <input type='checkbox' onChange={(e) => toggleFavAction(e, bird)} name="favorite" defaultChecked={bird.favorite}></input>
-                    <input type='button' onClick={(e) => deleteBirdAction(e, bird)} name="delete" value="Delete Bird"></input> 
-                    </li>
+               <Bird key={bird.id} bird={bird} deleteBirdAction={deleteBirdAction} toggleFavAction={toggleFavAction} />     
+                
+            )}
+            {birds.filter((bird) => {
+                return bird.favorite === false
+            }
+
+            ).map(bird => 
+                
+               <Bird key={bird.id} bird={bird} deleteBirdAction={deleteBirdAction} toggleFavAction={toggleFavAction} />     
                 
             )}
             </ul> 
         </div>
-    //make toggle for favorites here too
     );
 };
 
