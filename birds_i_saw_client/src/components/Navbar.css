@@ -10,13 +10,13 @@
 .navbar-logo {
     color: #fff;
     justify-self: start;
-    margin-left: 20px;
+    margin: auto;
     cursor: pointer;
 }
 
 .fa-birdsisaw {
     margin-left: 0.5rem;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 
 }
 
@@ -36,6 +36,7 @@
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    text-align: start
 }
 
 .nav-links:hover {
@@ -56,10 +57,10 @@ nav-links-mobile {
     display: none;
 }
 
-@media screen and (max-width: 960px) {
+/*@media screen and (max-width: 960px) {
     .NavbarItems {
         position: relative;
-    }
+    }*/
 
     .nav-menu {
         display: flex;
@@ -116,7 +117,7 @@ nav-links-mobile {
         font-size: 2rem;
     }
 
-    .nav-links-mobile {
+    /*.nav-links-mobile {
         display: block;
         text-align: center;
         padding: 1.5rem;
@@ -129,14 +130,15 @@ nav-links-mobile {
         font-size: 1.5rem;
 
     }
+    this is for if I ever have users and need a signup button*/
 
-    .nav-links-mobile:hover {
+    /*.nav-links-mobile:hover {
         background: #fff;
         color: #6568F4;
         transition: 250ms;
-    }
+    }*/
 
-    Button {
+    /*Button {
         display: none;
     }
-}
+}*/

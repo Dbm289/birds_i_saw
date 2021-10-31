@@ -16,11 +16,5 @@ export const MenuItems = [
         url: 'birds',
         cName: 'nav-links'
     },
-
-    {
-        title: 'Sign up',
-        url: '#',
-        cName: 'nav-links-mobile'
-    },
    
 ]
