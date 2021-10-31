@@ -3,27 +3,34 @@
     padding-left: 100px;
     padding-top: 25px;
     margin: 0 10px;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .birdsList {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 100px;
+    padding-left: 100px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     margin: 0 10px;
 
 }
 
 .bird {
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 100px;
+    padding-left: 25pxpx;
     padding-top: 25px;
     padding-bottom: 25px;
     margin: 0 10px;
+    line-height: 1.5em;
+
 }
 
 .about {
     font-family: Arial, Helvetica, sans-serif;
     padding:100px;
     margin: 0 10px;
+    line-height: 1.5em;
     
 }
 
@@ -32,18 +39,22 @@
     padding: 100px;
     margin: auto;
     text-align: left;
+    line-height: 2em;
 
 }
 
 .footer {
-    position: relative;
+    position: fixed;
+    width: 100%;
     bottom: 0;
     background: linear-gradient(90deg, rgb(139,69,19) 0%, rgb(61,12,2) 100%);
     padding: 25px;
+    display: flex;
 }
 
 .medium-link {
     color: rgb(255,253,208);
+    margin-right: 50px;
 }
 
 .youtube-link {
