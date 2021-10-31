@@ -1,10 +1,12 @@
 import React from "react"
+import '../Stylesheet.css'
+
 
 
 const Bird = ({bird, deleteBirdAction, toggleFavAction}) => {
 
     return (
-            <li>{bird.name} - {bird.last_seen_on} - {bird.location_seen} 
+            <li className="bird">{bird.name} - {bird.last_seen_on} - {bird.location_seen} 
                     - Number of times seen: {bird.times_seen} 
                     - Quality of sighting: {bird.quality_of_sightings} 
                     - Favorite? {bird.favorite ? 'yes' : 'no'} 

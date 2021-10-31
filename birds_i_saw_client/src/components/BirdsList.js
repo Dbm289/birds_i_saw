@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from 'react-redux'
 import Bird from './Bird';
 import { deleteBird, editBird } from "../actions/birdsActions";
+import BirdsForm from "./BirdsForm";
+import '../Stylesheet.css'
 
 const BirdsList = ( { birds, editBird, deleteBird }) => {
 
@@ -26,7 +28,11 @@ const BirdsList = ( { birds, editBird, deleteBird }) => {
 
     return (
         <div>
-        <ul>
+        <div>
+            <BirdsForm />
+
+            </div>
+        <ul className="birdsList">
             {birds.filter((bird) => {
                 return bird.favorite === true
             }
