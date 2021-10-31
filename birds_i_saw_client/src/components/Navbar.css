@@ -12,11 +12,13 @@
     justify-self: start;
     margin: auto;
     cursor: pointer;
+    font-size: 36px;
+    text-decoration: none;
 }
 
 .fa-birdsisaw {
     margin-left: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 36px;
 
 }
 
@@ -66,7 +68,7 @@ nav-links-mobile {
         display: flex;
         flex-direction: column;
         width: 100px;
-        height: 300px;
+        height: 150px;
         position: absolute;
         top: 80px;
         left: -100%;
@@ -84,14 +86,14 @@ nav-links-mobile {
 
     .nav-links {
         text-align: center;
-        padding: 2rem;
-        width: 100%;
+        width: 70%;
         display: table;
     }
 
     .nav-links:hover {
         background-color: rgb(61,12,2);
         border-radius: 0;
+        width: 100px;
     }
 
     .navbar-logo {
