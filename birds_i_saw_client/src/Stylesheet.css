@@ -1,6 +1,6 @@
 .form {
     font-family: Arial, Helvetica, sans-serif;
-    padding:25px 0;
+    padding: 100px;
     margin: 0 10px;
 }
 
@@ -13,21 +13,22 @@
 
 .bird {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 7.5px 0;
+    padding: 100px;
     margin: 0 10px;
 }
 
 .about {
     font-family: Arial, Helvetica, sans-serif;
-    padding:25px 0;
+    padding:100px;
     margin: 0 10px;
     
 }
 
 .welcome {
     font-family: Arial, Helvetica, sans-serif;
-    padding: center;
+    padding: 100px;
     margin: auto;
     text-align: left;
+
 }
 
