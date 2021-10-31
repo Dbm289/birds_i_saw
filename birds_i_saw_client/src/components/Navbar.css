@@ -28,7 +28,6 @@
     list-style: none;
     text-align: center;
     width: 70vw;
-    justify-content: end;
     margin-right: 2rem;
 
 }
@@ -67,7 +66,7 @@ nav-links-mobile {
         display: flex;
         flex-direction: column;
         width: 100px;
-        height: 500px;
+        height: 300px;
         position: absolute;
         top: 80px;
         left: -100%;

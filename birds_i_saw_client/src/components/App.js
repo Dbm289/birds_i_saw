@@ -3,6 +3,7 @@ import React from "react";
 import Router from "./Router";
 import BirdsContainer from "./BirdsContainer";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import '../Stylesheet.css'
 
 
@@ -13,6 +14,7 @@ const App = () => {
         <Navbar />
         <BirdsContainer />
         <Router />
+        <Footer />
         </div>
     );
 };

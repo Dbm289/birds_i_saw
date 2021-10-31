@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import { fetchBirds } from '../actions/birdsActions'
 
+
 class BirdsContainer extends Component {
 
     componentDidMount() {
@@ -11,7 +12,6 @@ class BirdsContainer extends Component {
     render() {
         return (
             <div>
-
             </div>
         );
     }

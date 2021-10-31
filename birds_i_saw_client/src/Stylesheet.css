@@ -35,3 +35,17 @@
 
 }
 
+.footer {
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(90deg, rgb(139,69,19) 0%, rgb(61,12,2) 100%);
+    padding: 25px;
+}
+
+.medium-link {
+    color: rgb(255,253,208);
+}
+
+.youtube-link {
+    color: rgb(255,253,208);
+}
