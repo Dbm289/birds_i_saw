@@ -13,7 +13,7 @@ class BirdsForm extends Component {
         location_seen: '',
         times_seen: '',
         quality_of_sightings: '',
-        favorite: '',
+        favorite: false,
     }
 
     handleChange = e => {
