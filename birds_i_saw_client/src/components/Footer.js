@@ -8,7 +8,7 @@ const Footer = () => {
                     
                 Medium Link
                 </a> <br /> <br />
-                <a className="youtube-link" href="youtube.com">
+                <a className="youtube-link" href="https://youtu.be/ZxWwFSkso2s">
                     YouTube Link
                 </a>
             </ul>
