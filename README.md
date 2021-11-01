@@ -8,6 +8,12 @@ Installation and Setup Instructions
 Example:
 Clone down this repository. You will need node and npm installed globally on your machine.
 
+The Rails API can be turned on using the command: 
+
+Rails S
+
+in your command line. Set up another terminal tab and open the React portion of the app using:
+
 Installation:
 
 npm install
