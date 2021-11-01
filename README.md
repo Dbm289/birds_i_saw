@@ -26,4 +26,4 @@ localhost:3000/home
 
 Planned improvements: connection to Flickr API or scraper to present pictures of the birds. Ability to filter by rating. 
 
-Immense thanks to Elenor Lewis, YouTuber Brian Design, Z Drake and Ronnie Boniface.
+Immense thanks to Eleanor Lewis, YouTuber Brian Design, Z Drake and Ronnie Boniface.
