@@ -3,7 +3,7 @@ import '../Stylesheet.css'
 
 
 
-const Bird = ({bird, deleteBirdAction, toggleFavAction}) => {
+const Bird = ({bird, deleteBirdAction, toggleFavAction, sawItAgainAction}) => {
 
     return (
             <ul className="bird"><h4>{bird.name} </h4><br /> {bird.last_seen_on} <br /> {bird.location_seen} <br />
@@ -12,6 +12,7 @@ const Bird = ({bird, deleteBirdAction, toggleFavAction}) => {
                 Favorite? {bird.favorite ? 'yes' : 'no'} 
                     <input type='checkbox' onChange={(e) => toggleFavAction(e, bird)} name="favorite" defaultChecked={bird.favorite}></input> <br />
                     <input type='button' onClick={(e) => deleteBirdAction(e, bird)} name="delete" value="Delete Bird"></input>
+                    <input type='button' onClick={(e) => sawItAgainAction(e, bird)} name="sawItAgain" value="I saw it again!"></input>
             </ul>
     )
 }

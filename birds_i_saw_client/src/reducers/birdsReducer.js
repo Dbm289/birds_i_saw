@@ -9,17 +9,15 @@ export const birdsReducer = (state = [], action) => {
                 action.payload.birdId !== bird.id)
         case 'EDIT_BIRD':
             console.log(state)
+            console.log(action.payload)
             return state.map(bird => {
                 if (bird.id !== action.payload.id) {
                     return bird
                 }
                 console.log(bird, !bird.favorite)
-                return {
-                    ...bird,
-                    favorite: !bird.favorite
-                }
+                return action.payload
+                
             })
-            //right now you're just adding the action payload, you may need to modify that
             default: 
             return state
             

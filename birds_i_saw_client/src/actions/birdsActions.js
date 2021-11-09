@@ -21,7 +21,6 @@ export const addBird = bird => {
 
 
 export const editBird = (bird) => {
-    console.log(bird)
     return (dispatch) => {
         fetch(`http://127.0.0.1:3000/birds/${bird.id}`, {
             method: 'PATCH',
@@ -46,7 +45,6 @@ export const deleteBird = (birdId) => {
 }
 
 export const toggleFavAction = (e, bird) => {
-    console.log(e.target.checked)
     const {checked} = e.target
     editBird({
         ...bird,
@@ -56,6 +54,14 @@ export const toggleFavAction = (e, bird) => {
     //    [name]: value == 
    // })
 }
+
+export const sawItAgain = (e, bird) => {
+    const times_seen = bird
+        editBird({
+            ...bird,
+            times_seen: times_seen + 1
+        })
+    }
 
 export const deleteBirdAction = (e, bird) => {
     e.preventDefault()

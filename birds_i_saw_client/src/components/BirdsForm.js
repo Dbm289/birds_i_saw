@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Navigate } from "react-router-dom";
 
 import { addBird } from '../actions/birdsActions'
 
@@ -13,7 +14,7 @@ class BirdsForm extends Component {
         location_seen: '',
         times_seen: '',
         quality_of_sightings: '',
-        favorite: false,
+        favorite: false
     }
 
     handleChange = e => {
@@ -41,8 +42,10 @@ class BirdsForm extends Component {
         this.props.addBird(this.state)
     }
 
+
     render() {
         return (
+            
             <form className="form" onSubmit={this.handleSubmit}>
 
             <label>Name:</label>

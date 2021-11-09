@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from './Button';
 import { MenuItems } from "./MenuItems"
 import './Navbar.css'
 import NavItem from './NavItem';
@@ -13,8 +12,6 @@ class Navbar extends Component {
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
     }
-
-
 
     render() {
         return(

@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from 'react-redux'
 import Bird from './Bird';
-import { deleteBird, editBird } from "../actions/birdsActions";
+import { deleteBird, editBird, sawItAgain } from "../actions/birdsActions";
 import BirdsForm from "./BirdsForm";
 import '../Stylesheet.css'
 
-const BirdsList = ( { birds, editBird, deleteBird }) => {
+const BirdsList = ( { birds, editBird, deleteBird, sawItAgain } ) => {
 
     const toggleFavAction = (e, bird) => {
         console.log(e.target.checked)
@@ -14,18 +14,22 @@ const BirdsList = ( { birds, editBird, deleteBird }) => {
             ...bird,
             favorite: checked
         })
-        //this.setState({
-        //    [name]: value == 
-       // })
     }
 
     const deleteBirdAction = (e, bird) => {
-        e.preventDefault()
         deleteBird(
             bird.id)
 
     }
 
+    const sawItAgainAction = (e, bird) => {
+        console.log(bird)
+        const seenItCount = bird.times_seen
+        editBird({
+            ...bird,
+            times_seen: seenItCount + 1})
+    }
+    
     return (
         <div>
         <div>
@@ -39,7 +43,7 @@ const BirdsList = ( { birds, editBird, deleteBird }) => {
 
             ).map(bird => 
                 
-               <Bird key={bird.id} bird={bird} deleteBirdAction={deleteBirdAction} toggleFavAction={toggleFavAction} />     
+               <Bird key={bird.id} bird={bird} deleteBirdAction={deleteBirdAction} toggleFavAction={toggleFavAction} sawItAgainAction={sawItAgainAction} />     
                 
             )}
             {birds.filter((bird) => {
@@ -48,7 +52,7 @@ const BirdsList = ( { birds, editBird, deleteBird }) => {
 
             ).map(bird => 
                 
-               <Bird key={bird.id} bird={bird} deleteBirdAction={deleteBirdAction} toggleFavAction={toggleFavAction} />     
+               <Bird key={bird.id} bird={bird} deleteBirdAction={deleteBirdAction} toggleFavAction={toggleFavAction} sawItAgainAction={sawItAgainAction} />     
                 
             )}
             </ul> 
@@ -62,4 +66,4 @@ const mapStateToProps = state => {
 
 
 
-export default connect(mapStateToProps, { editBird, deleteBird })(BirdsList);
+export default connect(mapStateToProps, { editBird, deleteBird, sawItAgain })(BirdsList);
