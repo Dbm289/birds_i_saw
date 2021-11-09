@@ -5,7 +5,7 @@ import { deleteBird, editBird, sawItAgain } from "../actions/birdsActions";
 import BirdsForm from "./BirdsForm";
 import '../Stylesheet.css'
 
-const BirdsList = ( { birds, editBird, deleteBird, sawItAgain } ) => {
+const BirdsList = ( { birds, editBird, deleteBird } ) => {
 
     const toggleFavAction = (e, bird) => {
         console.log(e.target.checked)

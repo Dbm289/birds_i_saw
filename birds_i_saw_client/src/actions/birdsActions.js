@@ -44,25 +44,6 @@ export const deleteBird = (birdId) => {
     
 }
 
-export const toggleFavAction = (e, bird) => {
-    const {checked} = e.target
-    editBird({
-        ...bird,
-        favorite: checked
-    })
-    //this.setState({
-    //    [name]: value == 
-   // })
-}
-
-export const sawItAgain = (e, bird) => {
-    const times_seen = bird
-        editBird({
-            ...bird,
-            times_seen: times_seen + 1
-        })
-    }
-
 export const deleteBirdAction = (e, bird) => {
     e.preventDefault()
     deleteBird(
