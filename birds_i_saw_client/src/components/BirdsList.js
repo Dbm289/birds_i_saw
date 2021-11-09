@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux'
 import Bird from './Bird';
-import { deleteBird, editBird, sawItAgain } from "../actions/birdsActions";
+import { deleteBird, editBird } from "../actions/birdsActions";
 import BirdsForm from "./BirdsForm";
 import '../Stylesheet.css'
 
@@ -66,4 +66,4 @@ const mapStateToProps = state => {
 
 
 
-export default connect(mapStateToProps, { editBird, deleteBird, sawItAgain })(BirdsList);
+export default connect(mapStateToProps, { editBird, deleteBird })(BirdsList);
