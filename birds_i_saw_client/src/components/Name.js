@@ -5,10 +5,11 @@ import '../Stylesheet.css'
 
 class Name extends Component {
     state = {
-        name: ''
+        name: '',
+        chosenName: ''
     }
 
-    handleCharChange = e => {
+    handleNameChange = e => {
         const { value } = e.target
 
         this.setState({
@@ -16,14 +17,22 @@ class Name extends Component {
         })
     }
 
+    handleNameSubmit = e => {
+        e.preventDefault()
+        this.setState({
+            chosenName: (this.state.name)
+        })
+
+    }
+
     render() {
         return (
             <div>
 
-<form className="characterForm" onSubmit={this.handleCharSubmit}>
+<form className="nameForm" onSubmit={this.handleNameSubmit}>
             <label>Name: </label>
 
-            <input type='text' value={this.state.name} onChange={this.handleCharChange} name="name" />
+            <input type='text' value={this.state.name} onChange={this.handleNameChange} name="name" />
 
             < br />
 
@@ -32,6 +41,20 @@ class Name extends Component {
             < br />
 
         </form>
+
+        <div>
+
+            <ul className="nameFeedback">
+            < br />
+            <h4>
+                Name Chosen:
+            </h4>
+            {this.state.chosenName}
+
+            </ul>
+            
+        </div>
+
 
             </div>
         )
