@@ -45,6 +45,15 @@ class Name extends Component {
         }
     };
 
+    handleButtonSubmit(e) {
+        e.preventDefault()
+        console.log(e)
+        alert('You chose ' + e.target.value + '!')
+        this.setState({
+            chosenName: e.target.value
+        })
+    }
+
     render() {
         return (
             <div>
@@ -60,7 +69,26 @@ class Name extends Component {
 
             < br />
 
+            < br />
+
         </form>
+
+        <input type='button' onClick={(e) => this.handleButtonSubmit(e)} name="Ash" value="Ash"></input>
+
+        < br />
+
+
+        <input type='button' onClick={(e) => this.handleButtonSubmit(e)} name="Red" value="Red"></input>
+
+        < br />
+
+
+        <input type='button' onClick={(e) => this.handleButtonSubmit(e)} name="Jack" value="Jack"></input>
+
+        < br />
+
+
+
 
         <div>
 
