@@ -4,9 +4,11 @@ import React, { Component } from 'react';
 import '../Stylesheet.css'
 
 class Name extends Component {
+
     state = {
-        name: '',
-        chosenName: ''
+        name: 'Ash',
+        chosenName: '',
+        nameError: ''
     }
 
     handleNameChange = e => {
@@ -17,13 +19,30 @@ class Name extends Component {
         })
     }
 
+    validate = () => {
+        let nameError = "";
+
+        if (this.state.name.includes("BadName")) {
+            nameError = 'Your name is a naughty name and, thus, invalid';
+        }
+
+        if (nameError) {
+            this.setState({ nameError });
+            return false;
+        }
+
+        return true
+    }
+
     handleNameSubmit = e => {
         e.preventDefault()
-        this.setState({
-            chosenName: (this.state.name)
-        })
-
-    }
+        const isValid = this.validate();
+        if (isValid) {
+            this.setState({
+                chosenName: this.state.name
+            })
+        }
+    };
 
     render() {
         return (
@@ -53,6 +72,9 @@ class Name extends Component {
 
             </ul>
             
+        </div>
+        <div style={{ color: "red" }}>
+            {this.state.nameError}
         </div>
 
 
