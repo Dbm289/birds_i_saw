@@ -6,6 +6,7 @@ import BirdsList from '../components/BirdsList'
 import About from '../components/About'
 import CharacterCounter from '../components/characterCounter'
 import Name from '../components/Name'
+import Squares from '../components/Squares'
 
 const Router = () => {
     return (
@@ -16,6 +17,7 @@ const Router = () => {
             <Route exact path='/Birds' component={BirdsList} />
             <Route exact path='/charactercounter' component={CharacterCounter} />
             <Route exact path='/name' component={Name} />
+            <Route exact path='/squares' component={Squares} />
 
 
 

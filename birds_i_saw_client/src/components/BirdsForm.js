@@ -62,7 +62,7 @@ class BirdsForm extends Component {
 
             <label>Location seen:</label>
 
-            <input type='text' value={this.state.location_seen} onChange={this.handleChange} name="location_seen"/>
+            <input type='text' value={this.state.location_seen} onChange={this.handleChange} name="location_seen" />
 
             < br />
 
