@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 
 import '../Stylesheet.css'
+import NameButton from './nameButton';
 
 class Name extends Component {
 
@@ -9,6 +10,7 @@ class Name extends Component {
         super();
         this.input = React.createRef();
         this.handleNameSubmit = this.handleNameSubmit.bind(this);
+        this.handleButtonSubmit = this.handleButtonSubmit.bind(this);
 
 
     }
@@ -61,11 +63,11 @@ class Name extends Component {
 <form className="nameForm" onSubmit={this.handleNameSubmit}>
             <label>Name: </label>
 
-            <input defaultValue='Ash' type='text'  ref={this.input}/>
+            <input type='text'  ref={this.input}/>
 
             < br />
 
-            <input type='submit' value="Select this name" />
+            <input type='submit' value="Add your own name" />
 
             < br />
 
@@ -73,17 +75,16 @@ class Name extends Component {
 
         </form>
 
-        <input type='button' onClick={(e) => this.handleButtonSubmit(e)} name="Ash" value="Ash"></input>
+        <NameButton name={"Ash"} handleButtonSubmit={this.handleButtonSubmit}  />
+
+        < br />
+
+        <NameButton name={"Red"} handleButtonSubmit={this.handleButtonSubmit} />
 
         < br />
 
 
-        <input type='button' onClick={(e) => this.handleButtonSubmit(e)} name="Red" value="Red"></input>
-
-        < br />
-
-
-        <input type='button' onClick={(e) => this.handleButtonSubmit(e)} name="Jack" value="Jack"></input>
+        <NameButton name={"Jack"} handleButtonSubmit={this.handleButtonSubmit} />
 
         < br />
 
