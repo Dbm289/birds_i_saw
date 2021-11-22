@@ -27,8 +27,9 @@ class Name extends Component {
             nameError = 'Your name is a naughty name and, thus, invalid';
         }
 
+        this.setState({ nameError });
+
         if (nameError) {
-            this.setState({ nameError });
             return false;
         }
 
@@ -52,7 +53,8 @@ class Name extends Component {
         console.log(e)
         alert('You chose ' + e.target.value + '!')
         this.setState({
-            chosenName: e.target.value
+            chosenName: e.target.value,
+            nameError: ''
         })
     }
 
