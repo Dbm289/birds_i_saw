@@ -11,6 +11,7 @@ class Name extends Component {
         this.input = React.createRef();
         this.handleNameSubmit = this.handleNameSubmit.bind(this);
         this.handleButtonSubmit = this.handleButtonSubmit.bind(this);
+        this.names = ["Ash", "Red", "Jack", "Eleanor"]
 
 
     }
@@ -77,19 +78,17 @@ class Name extends Component {
 
         </form>
 
-        <NameButton name={"Ash"} handleButtonSubmit={this.handleButtonSubmit}  />
+        
 
-        < br />
+        {this.names.map((name) => {
+            
 
-        <NameButton name={"Red"} handleButtonSubmit={this.handleButtonSubmit} />
-
-        < br />
+            return(
 
 
-        <NameButton name={"Jack"} handleButtonSubmit={this.handleButtonSubmit} />
+        <NameButton name={name} key={name} handleButtonSubmit={this.handleButtonSubmit}  />
 
-        < br />
-
+            )})}
 
 
 
