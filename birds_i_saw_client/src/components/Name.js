@@ -5,24 +5,23 @@ import '../Stylesheet.css'
 
 class Name extends Component {
 
-    state = {
-        name: 'Ash',
-        chosenName: '',
-        nameError: ''
+    constructor() {
+        super();
+        this.input = React.createRef();
+        this.handleNameSubmit = this.handleNameSubmit.bind(this);
+
+
     }
 
-    handleNameChange = e => {
-        const { value } = e.target
-
-        this.setState({
-            name: value
-        })
+    state = {
+        chosenName: '',
+        nameError: ''
     }
 
     validate = () => {
         let nameError = "";
 
-        if (this.state.name.includes("BadName")) {
+        if (this.input.current.value.includes("BadName")) {
             nameError = 'Your name is a naughty name and, thus, invalid';
         }
 
@@ -34,12 +33,14 @@ class Name extends Component {
         return true
     }
 
-    handleNameSubmit = e => {
+    handleNameSubmit(e) {
+        console.log(this.input)
         e.preventDefault()
+        alert('You submitted a name: ' + this.input.current.value);
         const isValid = this.validate();
         if (isValid) {
             this.setState({
-                chosenName: this.state.name
+                chosenName: this.input.current.value
             })
         }
     };
@@ -51,7 +52,7 @@ class Name extends Component {
 <form className="nameForm" onSubmit={this.handleNameSubmit}>
             <label>Name: </label>
 
-            <input type='text' value={this.state.name} onChange={this.handleNameChange} name="name" />
+            <input defaultValue='Ash' type='text'  ref={this.input}/>
 
             < br />
 
