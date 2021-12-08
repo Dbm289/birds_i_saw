@@ -7,6 +7,7 @@ import About from '../components/About'
 import CharacterCounter from '../components/characterCounter'
 import Name from '../components/Name'
 import Squares from '../components/Squares'
+import HelloWorld from '../components/HelloWorld'
 
 const Router = () => {
     return (
@@ -18,6 +19,7 @@ const Router = () => {
             <Route exact path='/charactercounter' component={CharacterCounter} />
             <Route exact path='/name' component={Name} />
             <Route exact path='/squares' component={Squares} />
+            <Route exact path='/helloworld' component={HelloWorld} />
 
 
 
